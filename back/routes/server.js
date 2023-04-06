@@ -27,6 +27,7 @@ server.get("/rickandmorty/character/:id", async (req, res) => {
   try {
     const { id } = req.params;
     parseInt(id);
+    console.log(id)
     const response = await axios(
       `https://rickandmortyapi.com/api/character/${id}`
     );
